@@ -26,8 +26,8 @@
 
 //// Configure the motor drivers for Linear Actuators (1 - 3).
 CytronMD la_1(PWM_DIR, 12, 11);  // PWM = Pin 12, DIR = Pin 11 - Linear Actuator 1.
-CytronMD la_3(PWM_DIR, 10, 9);  // PWM = Pin 10, DIR = Pin 09 - Linear Actuator 2.
-CytronMD la_2(PWM_DIR, 6, 5);  // PWM = Pin 06, DIR = Pin 05 - Linear Actuator 3.
+CytronMD la_2(PWM_DIR, 10, 9);  // PWM = Pin 10, DIR = Pin 09 - Linear Actuator 2.
+CytronMD la_3(PWM_DIR, 6, 5);  // PWM = Pin 06, DIR = Pin 05 - Linear Actuator 3.
 
 int actuator_speed = 32; // Set the actuators speed here
 int wheel_speed = 1000; // Set the wheels Speed in Dps(degrees per second here)
@@ -297,9 +297,6 @@ void setup(){
   // pinMode(CH3, INPUT); // SDA  (Not used)
   pinMode(CH5, INPUT); // SCL
   pinMode(CH6, INPUT); // A4
-
-    // Start the Serial monitor
-  while (!Serial) delay(10);
 
   // Set up CAN standby and booster pins
   pinMode(PIN_CAN_STANDBY, OUTPUT);
